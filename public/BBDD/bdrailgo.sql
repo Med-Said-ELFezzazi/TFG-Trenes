@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-04-2025 a las 13:02:16
+-- Tiempo de generación: 04-04-2025 a las 21:28:18
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -101,16 +101,17 @@ CREATE TABLE `rutas` (
   `destino` varchar(200) NOT NULL,
   `hora_salida` datetime NOT NULL,
   `hora_llegada` datetime NOT NULL,
-  `tarifa` int(11) NOT NULL
+  `tarifa` int(11) NOT NULL,
+  `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `rutas`
 --
 
-INSERT INTO `rutas` (`id_ruta`, `num_serie`, `origen`, `destino`, `hora_salida`, `hora_llegada`, `tarifa`) VALUES
-(1, '11111111111D', 'Vitoria', 'Madrid', '2025-03-26 10:30:00', '2025-03-26 15:00:00', 15),
-(2, '11111111111D', 'Vitoria', 'Madrid', '2025-03-26 14:30:00', '2025-03-26 19:00:00', 20);
+INSERT INTO `rutas` (`id_ruta`, `num_serie`, `origen`, `destino`, `hora_salida`, `hora_llegada`, `tarifa`, `fecha`) VALUES
+(1, '11111111111D', 'Vitoria', 'Madrid', '2025-04-14 10:30:00', '2025-03-26 15:00:00', 15, '2025-04-14'),
+(2, '11111111111D', 'Vitoria', 'Madrid', '2025-04-14 14:30:00', '2025-03-26 19:00:00', 20, '2025-04-14');
 
 -- --------------------------------------------------------
 
