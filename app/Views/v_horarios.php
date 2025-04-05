@@ -33,7 +33,7 @@
                             '0' => 'Seleccione origen',
                         ];
                         foreach ($ciudadesOrg as $ciudad) {
-                            $origenOptions[$ciudad->ciudad_origin] = $ciudad->ciudad_origin;
+                            $origenOptions[$ciudad->origen] = $ciudad->origen;
                         }
                         $origenSel = $_POST['origenSel'] ?? '0';
                         echo form_dropdown('origenSel', $origenOptions, $origenSel, [
@@ -52,7 +52,7 @@
                         '0' => 'Seleccione destino'
                     ];
                     foreach ($ciudadesDes as $ciudad) {
-                        $destinoOptions[$ciudad->ciudad_destino] = $ciudad->ciudad_destino;
+                        $destinoOptions[$ciudad->destino] = $ciudad->destino;
                     }
                     $destinoSel = $_POST['destinoSel'] ?? '0';
                     echo form_dropdown('destinoSel', $destinoOptions, $destinoSel, [
@@ -115,9 +115,9 @@
                                 echo '</thead>';
                                 foreach($datosRutas as $ruta) {
                                     echo '<tr>';
-                                        echo '<td>'.$ruta->ciudad_origin.'</td>';
+                                        echo '<td>'.$ruta->origen.'</td>';
                                         echo '<td>'.date('H:i', strtotime($ruta->hora_salida)).'</td>';
-                                        echo '<td>'.$ruta->ciudad_destino.'</td>';
+                                        echo '<td>'.$ruta->destino.'</td>';
                                         echo '<td>'.date('H:i', strtotime($ruta->hora_llegada)).'</td>';
                                     echo '</tr>';
                                 }                        
