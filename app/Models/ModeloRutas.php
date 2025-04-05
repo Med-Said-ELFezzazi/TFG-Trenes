@@ -12,7 +12,7 @@
     protected $returnType     = 'object';   // Array de obj, como se le pasan o devuelve las filas de la tabla
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['num_serie', 'origen', 'destino', 'hora_salida', 'hora_llegada', 'tarifa'];
+    protected $allowedFields = ['num_serie', 'origen', 'destino', 'hora_salida', 'hora_llegada', 'tarifa', 'fecha'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
